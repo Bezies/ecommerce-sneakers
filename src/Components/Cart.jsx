@@ -3,10 +3,12 @@ import { deleteCart } from "../features/cart";
 
 export default function Cart() {
   const cart = useSelector((state) => state.cart);
+  const menu = useSelector((state) => state.hamburger);
+
   const dispatch = useDispatch();
 
   return (
-    <div className="w-[300px] h-[200px] bg-slate-50 flex flex-col items-center absolute top-12 left-[-80px]">
+    <div className="w-[300px] h-[250px] bg-slate-50 flex flex-col items-center absolute top-12 left-[-200px] md:left-[-80px] rounded-lg">
       <p className="mt-5 w-full border-b-[1px] pb-5 font-semibold">Cart</p>
       {cart.quantity > 0 && cart.addToCart && (
         <div className="flex items-center justify-between w-3/4 my-6">
@@ -25,6 +27,7 @@ export default function Cart() {
                 ${(cart.quantity * cart.price).toFixed(2)}
               </span>
             </p>
+            {/* CART EMPTY  */}
           </div>
           <button onClick={() => dispatch(deleteCart())}>
             <span>
@@ -33,6 +36,13 @@ export default function Cart() {
           </button>
         </div>
       )}
+      <div>
+        {cart.quantity === 0 && (
+          <p className="text-gray-400 font-semibold mt-14">
+            Your cart is empty
+          </p>
+        )}
+      </div>
       {cart.quantity > 0 && (
         <button className="bg-orange-400 text-slate-50 text-semibold text-sm px-4 py-2 rounded w-3/4 mb-5">
           Checkout

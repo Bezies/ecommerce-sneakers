@@ -40,13 +40,13 @@ export default function Modal({ closeModal }) {
           className="rounded-full bg-slate-50 py-3 px-4 flex items-center justify-center absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2"
         >
           <span>
-            <img src="/images/icon-next.svg" alt="" />
+            <img src="images/icon-next.svg" alt="" />
           </span>
         </button>
         <button onClick={closeModal}>
           <img
             className="absolute -top-10 right-0 w-5 h-5"
-            src="/images/icon-close.svg"
+            src="images/icon-close.svg"
             alt=""
           />
         </button>

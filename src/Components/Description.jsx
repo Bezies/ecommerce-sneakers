@@ -48,7 +48,7 @@ export default function Description() {
         </div>
         <button
           onClick={() => dispatch(addToCart())}
-          className="w-full flex items-center justify-center mt-4 xl:mt-0  xl:ml-10 bg-orange-500 py-4 xl:py-2 px-5 rounded text-slate-50 hover:opacity-60"
+          className="w-full flex items-center justify-center mt-4 xl:mt-0  xl:ml-10 bg-orange-500 py-4 xl:py-2 px-5 rounded text-slate-50 hover:opacity-60 font-semibold text-sm"
         >
           <span>
             <img
@@ -57,7 +57,7 @@ export default function Description() {
               alt="icon cart"
             />
           </span>
-          <p className="font-semibold text-sm">Add to cart</p>
+          Add to cart
         </button>
       </div>
     </div>

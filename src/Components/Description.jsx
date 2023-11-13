@@ -28,7 +28,7 @@ export default function Description() {
         </span>
       </div>
 
-      <div className="xl:flex xl:items-center xl:justify-center mt-10">
+      <div className="xl:flex xl:items-center xl:justify-center mt-10 pb-20 xl:pb-0">
         <div className="flex items-center justify-between xl:justify-center rounded bg-gray-100 px-4 py-2">
           <button onClick={() => dispatch(removeSneakers())}>
             <img

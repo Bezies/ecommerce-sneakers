@@ -16,6 +16,11 @@ export default function Modal({ closeModal }) {
     setImageLightBox(newState);
   }
 
+  function sliderLightbox(e, index) {
+    e.stopPropagation();
+    setImageLightBox(index + 1);
+  }
+
   return (
     <div
       onClick={closeModal}
@@ -53,13 +58,17 @@ export default function Modal({ closeModal }) {
       </div>
       <div className="flex items-center justify-between w-96 mt-10">
         {sliderData.map((image, index) => (
-          <img
-            key={image.id}
-            onClick={() => setImageLightBox(index + 1)}
-            className="rounded h-20 w-20 mr-3 cursor-pointer"
-            src={image.url}
-            alt=""
-          />
+          <button
+            className="h-20 w-20 rounded-md cursor-pointer focus:border-2 focus:border-orange-500 focus:opacity-30 hover:opacity-60"
+            onClick={(e) => sliderLightbox(e, index)}
+          >
+            <img
+              key={image.id}
+              className="h-18 w-18 mr-3 rounded-md"
+              src={image.url}
+              alt=""
+            />
+          </button>
         ))}
       </div>
     </div>

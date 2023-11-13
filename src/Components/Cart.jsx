@@ -38,7 +38,7 @@ export default function Cart() {
       )}
       <div>
         {cart.quantity === 0 && (
-          <p className="text-gray-400 font-semibold mt-14">
+          <p className="text-gray-500 font-semibold mt-20 text-sm">
             Your cart is empty
           </p>
         )}

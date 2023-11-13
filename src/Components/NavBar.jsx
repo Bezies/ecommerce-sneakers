@@ -15,7 +15,7 @@ export default function NavBar() {
           <img
             src="images/icon-menu.svg"
             alt="hamburger button"
-            className="md:hidden mr-4"
+            className="md:hidden mr-4 inline"
           />
         </button>
         <img src="images/logo.svg" alt="icon logo" className="mr-10" />
